@@ -371,6 +371,48 @@
     padding-top: 4px;
   }
 
+  /* Auto-scrolling signal feed */
+  .hdb-feed-viewport {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    padding-right: 14px;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, black 8%, black 92%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0, black 8%, black 92%, transparent 100%);
+  }
+  .hdb-feed-track {
+    display: flex;
+    flex-direction: column;
+    animation: hdbFeedScroll 60s linear infinite;
+  }
+  .hdb-feed-viewport:hover .hdb-feed-track,
+  .hdb-feed-viewport:hover ~ .hdb-scrollbar-thumb {
+    animation-play-state: paused;
+  }
+  @keyframes hdbFeedScroll {
+    from { transform: translateY(0); }
+    to { transform: translateY(-50%); }
+  }
+  .hdb-scrollbar-track {
+    position: absolute;
+    top: 0; right: 0;
+    width: 4px; height: 100%;
+    background: rgba(255,255,255,0.08);
+    border-radius: 2px;
+  }
+  .hdb-scrollbar-thumb {
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 16%;
+    background: rgba(244,241,236,0.4);
+    border-radius: 2px;
+    animation: hdbThumbScroll 60s linear infinite;
+  }
+  @keyframes hdbThumbScroll {
+    0% { top: 0%; }
+    100% { top: 84%; }
+  }
+
   /* Top stat row — sits above the dashboard panel */
   .hdb-top-stats {
     display: grid;
@@ -2632,28 +2674,235 @@
               <span class="hdb-chip">New Product Launches · 9</span>
             </div>
 
-            <div class="hdb-card" id="hdbCard1">
-              <div class="hdb-card-meta">
-                <span class="hdb-badge hdb-badge-expansion">EXPANSION</span>
-                <span class="hdb-fit hdb-fit-high">91% Fit</span>
-                <span class="hdb-time">2d ago</span>
-                <span class="hdb-category">·&nbsp; Manufacturing — Ohio capital project</span>
-              </div>
-              <span class="hdb-company">Midwest Fabrication Co.</span>
-              <div class="hdb-headline">Midwest Fabrication breaks ground on $42M Dayton expansion</div>
-              <p class="hdb-analysis">New facility investment signals fresh equipment, staffing, and vendor needs during build-out — directly within target industry and geography.</p>
-            </div>
+            <div class="hdb-feed-viewport">
+              <div class="hdb-feed-track">
+                <!-- pass 1 -->
+                <div class="hdb-card">
+                  <div class="hdb-card-meta">
+                    <span class="hdb-badge hdb-badge-expansion">EXPANSION</span>
+                    <span class="hdb-fit hdb-fit-high">91% Fit</span>
+                    <span class="hdb-time">2d ago</span>
+                    <span class="hdb-category">·&nbsp; Manufacturing — Ohio capital project</span>
+                  </div>
+                  <span class="hdb-company">Midwest Fabrication Co.</span>
+                  <div class="hdb-headline">Midwest Fabrication breaks ground on $42M Dayton expansion</div>
+                  <p class="hdb-analysis">New facility investment signals fresh equipment, staffing, and vendor needs during build-out — directly within target industry and geography.</p>
+                </div>
+                <div class="hdb-card">
+                  <div class="hdb-card-meta">
+                    <span class="hdb-badge hdb-badge-leadership">LEADERSHIP</span>
+                    <span class="hdb-fit hdb-fit-mid">76% Fit</span>
+                    <span class="hdb-time">5d ago</span>
+                    <span class="hdb-category">·&nbsp; Operations — new VP hire</span>
+                  </div>
+                  <span class="hdb-company">Sterling Industrial Supply</span>
+                  <div class="hdb-headline">Sterling Industrial names new VP of Operations</div>
+                  <p class="hdb-analysis">New operations leadership typically reviews existing vendor relationships within the first 90 days — a high-value window for outreach.</p>
+                </div>
+                <div class="hdb-card">
+                  <div class="hdb-card-meta">
+                    <span class="hdb-badge hdb-badge-funding">FUNDING</span>
+                    <span class="hdb-fit hdb-fit-high">88% Fit</span>
+                    <span class="hdb-time">1d ago</span>
+                    <span class="hdb-category">·&nbsp; Growth capital — $18M raise</span>
+                  </div>
+                  <span class="hdb-company">Ashcroft Metals Group</span>
+                  <div class="hdb-headline">Ashcroft Metals closes $18M growth funding round</div>
+                  <p class="hdb-analysis">Fresh capital often precedes equipment purchases and capacity investment — a strong early signal ahead of formal RFPs.</p>
+                </div>
+                <div class="hdb-card">
+                  <div class="hdb-card-meta">
+                    <span class="hdb-badge hdb-badge-product">PRODUCT</span>
+                    <span class="hdb-fit hdb-fit-mid">63% Fit</span>
+                    <span class="hdb-time">4d ago</span>
+                    <span class="hdb-category">·&nbsp; New product line — automation</span>
+                  </div>
+                  <span class="hdb-company">Bridgeline Equipment Co.</span>
+                  <div class="hdb-headline">Bridgeline Equipment launches new automation product line</div>
+                  <p class="hdb-analysis">New product launches often require new suppliers and partners to support production ramp-up.</p>
+                </div>
+                <div class="hdb-card">
+                  <div class="hdb-card-meta">
+                    <span class="hdb-badge hdb-badge-acquisition">ACQUISITION</span>
+                    <span class="hdb-fit hdb-fit-high">85% Fit</span>
+                    <span class="hdb-time">6d ago</span>
+                    <span class="hdb-category">·&nbsp; M&amp;A — plant integration</span>
+                  </div>
+                  <span class="hdb-company">Ferro Dynamics Inc.</span>
+                  <div class="hdb-headline">Ferro Dynamics acquired by Meridian Industrial</div>
+                  <p class="hdb-analysis">Acquisitions frequently trigger vendor consolidation and systems integration — a high-value window to get in early.</p>
+                </div>
+                <div class="hdb-card">
+                  <div class="hdb-card-meta">
+                    <span class="hdb-badge hdb-badge-hiring">HIRING</span>
+                    <span class="hdb-fit hdb-fit-mid">70% Fit</span>
+                    <span class="hdb-time">3d ago</span>
+                    <span class="hdb-category">·&nbsp; Hiring surge — 12 plant roles</span>
+                  </div>
+                  <span class="hdb-company">Continental Alloy Works</span>
+                  <div class="hdb-headline">Continental Alloy posts 12 new plant roles</div>
+                  <p class="hdb-analysis">A hiring surge signals capacity growth and operational change — often a precursor to new vendor evaluations.</p>
+                </div>
+                <div class="hdb-card">
+                  <div class="hdb-card-meta">
+                    <span class="hdb-badge hdb-badge-expansion">EXPANSION</span>
+                    <span class="hdb-fit hdb-fit-mid">79% Fit</span>
+                    <span class="hdb-time">1w ago</span>
+                    <span class="hdb-category">·&nbsp; Facility — new distribution center</span>
+                  </div>
+                  <span class="hdb-company">Hartwell Logistics Group</span>
+                  <div class="hdb-headline">Hartwell Logistics opens second distribution center</div>
+                  <p class="hdb-analysis">New facilities mean new equipment, staffing, and systems needs — a strong window for outreach.</p>
+                </div>
+                <div class="hdb-card">
+                  <div class="hdb-card-meta">
+                    <span class="hdb-badge hdb-badge-leadership">LEADERSHIP</span>
+                    <span class="hdb-fit hdb-fit-low">58% Fit</span>
+                    <span class="hdb-time">2w ago</span>
+                    <span class="hdb-category">·&nbsp; Executive — new CFO</span>
+                  </div>
+                  <span class="hdb-company">Vantage Precision Parts</span>
+                  <div class="hdb-headline">Vantage Precision Parts appoints new CFO</div>
+                  <p class="hdb-analysis">New finance leadership often revisits budgets and vendor contracts within the first two quarters.</p>
+                </div>
+                <div class="hdb-card">
+                  <div class="hdb-card-meta">
+                    <span class="hdb-badge hdb-badge-funding">FUNDING</span>
+                    <span class="hdb-fit hdb-fit-high">92% Fit</span>
+                    <span class="hdb-time">12h ago</span>
+                    <span class="hdb-category">·&nbsp; Series C — $40M raise</span>
+                  </div>
+                  <span class="hdb-company">Ironclad Robotics</span>
+                  <div class="hdb-headline">Ironclad Robotics raises $40M Series C</div>
+                  <p class="hdb-analysis">Large funding rounds usually fund headcount and infrastructure growth — an early, high-fit signal.</p>
+                </div>
+                <div class="hdb-card">
+                  <div class="hdb-card-meta">
+                    <span class="hdb-badge hdb-badge-product">PRODUCT</span>
+                    <span class="hdb-fit hdb-fit-mid">67% Fit</span>
+                    <span class="hdb-time">8d ago</span>
+                    <span class="hdb-category">·&nbsp; New product — smart sensors</span>
+                  </div>
+                  <span class="hdb-company">Beacon Industrial Systems</span>
+                  <div class="hdb-headline">Beacon Industrial launches smart sensor product line</div>
+                  <p class="hdb-analysis">New product lines often require new supply chain and integration partners to support rollout.</p>
+                </div>
 
-            <div class="hdb-card" id="hdbCard2">
-              <div class="hdb-card-meta">
-                <span class="hdb-badge hdb-badge-leadership">LEADERSHIP</span>
-                <span class="hdb-fit hdb-fit-mid">76% Fit</span>
-                <span class="hdb-time">5d ago</span>
-                <span class="hdb-category">·&nbsp; Operations — new VP hire</span>
+                <!-- pass 2 (exact duplicate, makes the loop seamless) -->
+                <div class="hdb-card" aria-hidden="true">
+                  <div class="hdb-card-meta">
+                    <span class="hdb-badge hdb-badge-expansion">EXPANSION</span>
+                    <span class="hdb-fit hdb-fit-high">91% Fit</span>
+                    <span class="hdb-time">2d ago</span>
+                    <span class="hdb-category">·&nbsp; Manufacturing — Ohio capital project</span>
+                  </div>
+                  <span class="hdb-company">Midwest Fabrication Co.</span>
+                  <div class="hdb-headline">Midwest Fabrication breaks ground on $42M Dayton expansion</div>
+                  <p class="hdb-analysis">New facility investment signals fresh equipment, staffing, and vendor needs during build-out — directly within target industry and geography.</p>
+                </div>
+                <div class="hdb-card" aria-hidden="true">
+                  <div class="hdb-card-meta">
+                    <span class="hdb-badge hdb-badge-leadership">LEADERSHIP</span>
+                    <span class="hdb-fit hdb-fit-mid">76% Fit</span>
+                    <span class="hdb-time">5d ago</span>
+                    <span class="hdb-category">·&nbsp; Operations — new VP hire</span>
+                  </div>
+                  <span class="hdb-company">Sterling Industrial Supply</span>
+                  <div class="hdb-headline">Sterling Industrial names new VP of Operations</div>
+                  <p class="hdb-analysis">New operations leadership typically reviews existing vendor relationships within the first 90 days — a high-value window for outreach.</p>
+                </div>
+                <div class="hdb-card" aria-hidden="true">
+                  <div class="hdb-card-meta">
+                    <span class="hdb-badge hdb-badge-funding">FUNDING</span>
+                    <span class="hdb-fit hdb-fit-high">88% Fit</span>
+                    <span class="hdb-time">1d ago</span>
+                    <span class="hdb-category">·&nbsp; Growth capital — $18M raise</span>
+                  </div>
+                  <span class="hdb-company">Ashcroft Metals Group</span>
+                  <div class="hdb-headline">Ashcroft Metals closes $18M growth funding round</div>
+                  <p class="hdb-analysis">Fresh capital often precedes equipment purchases and capacity investment — a strong early signal ahead of formal RFPs.</p>
+                </div>
+                <div class="hdb-card" aria-hidden="true">
+                  <div class="hdb-card-meta">
+                    <span class="hdb-badge hdb-badge-product">PRODUCT</span>
+                    <span class="hdb-fit hdb-fit-mid">63% Fit</span>
+                    <span class="hdb-time">4d ago</span>
+                    <span class="hdb-category">·&nbsp; New product line — automation</span>
+                  </div>
+                  <span class="hdb-company">Bridgeline Equipment Co.</span>
+                  <div class="hdb-headline">Bridgeline Equipment launches new automation product line</div>
+                  <p class="hdb-analysis">New product launches often require new suppliers and partners to support production ramp-up.</p>
+                </div>
+                <div class="hdb-card" aria-hidden="true">
+                  <div class="hdb-card-meta">
+                    <span class="hdb-badge hdb-badge-acquisition">ACQUISITION</span>
+                    <span class="hdb-fit hdb-fit-high">85% Fit</span>
+                    <span class="hdb-time">6d ago</span>
+                    <span class="hdb-category">·&nbsp; M&amp;A — plant integration</span>
+                  </div>
+                  <span class="hdb-company">Ferro Dynamics Inc.</span>
+                  <div class="hdb-headline">Ferro Dynamics acquired by Meridian Industrial</div>
+                  <p class="hdb-analysis">Acquisitions frequently trigger vendor consolidation and systems integration — a high-value window to get in early.</p>
+                </div>
+                <div class="hdb-card" aria-hidden="true">
+                  <div class="hdb-card-meta">
+                    <span class="hdb-badge hdb-badge-hiring">HIRING</span>
+                    <span class="hdb-fit hdb-fit-mid">70% Fit</span>
+                    <span class="hdb-time">3d ago</span>
+                    <span class="hdb-category">·&nbsp; Hiring surge — 12 plant roles</span>
+                  </div>
+                  <span class="hdb-company">Continental Alloy Works</span>
+                  <div class="hdb-headline">Continental Alloy posts 12 new plant roles</div>
+                  <p class="hdb-analysis">A hiring surge signals capacity growth and operational change — often a precursor to new vendor evaluations.</p>
+                </div>
+                <div class="hdb-card" aria-hidden="true">
+                  <div class="hdb-card-meta">
+                    <span class="hdb-badge hdb-badge-expansion">EXPANSION</span>
+                    <span class="hdb-fit hdb-fit-mid">79% Fit</span>
+                    <span class="hdb-time">1w ago</span>
+                    <span class="hdb-category">·&nbsp; Facility — new distribution center</span>
+                  </div>
+                  <span class="hdb-company">Hartwell Logistics Group</span>
+                  <div class="hdb-headline">Hartwell Logistics opens second distribution center</div>
+                  <p class="hdb-analysis">New facilities mean new equipment, staffing, and systems needs — a strong window for outreach.</p>
+                </div>
+                <div class="hdb-card" aria-hidden="true">
+                  <div class="hdb-card-meta">
+                    <span class="hdb-badge hdb-badge-leadership">LEADERSHIP</span>
+                    <span class="hdb-fit hdb-fit-low">58% Fit</span>
+                    <span class="hdb-time">2w ago</span>
+                    <span class="hdb-category">·&nbsp; Executive — new CFO</span>
+                  </div>
+                  <span class="hdb-company">Vantage Precision Parts</span>
+                  <div class="hdb-headline">Vantage Precision Parts appoints new CFO</div>
+                  <p class="hdb-analysis">New finance leadership often revisits budgets and vendor contracts within the first two quarters.</p>
+                </div>
+                <div class="hdb-card" aria-hidden="true">
+                  <div class="hdb-card-meta">
+                    <span class="hdb-badge hdb-badge-funding">FUNDING</span>
+                    <span class="hdb-fit hdb-fit-high">92% Fit</span>
+                    <span class="hdb-time">12h ago</span>
+                    <span class="hdb-category">·&nbsp; Series C — $40M raise</span>
+                  </div>
+                  <span class="hdb-company">Ironclad Robotics</span>
+                  <div class="hdb-headline">Ironclad Robotics raises $40M Series C</div>
+                  <p class="hdb-analysis">Large funding rounds usually fund headcount and infrastructure growth — an early, high-fit signal.</p>
+                </div>
+                <div class="hdb-card" aria-hidden="true">
+                  <div class="hdb-card-meta">
+                    <span class="hdb-badge hdb-badge-product">PRODUCT</span>
+                    <span class="hdb-fit hdb-fit-mid">67% Fit</span>
+                    <span class="hdb-time">8d ago</span>
+                    <span class="hdb-category">·&nbsp; New product — smart sensors</span>
+                  </div>
+                  <span class="hdb-company">Beacon Industrial Systems</span>
+                  <div class="hdb-headline">Beacon Industrial launches smart sensor product line</div>
+                  <p class="hdb-analysis">New product lines often require new supply chain and integration partners to support rollout.</p>
+                </div>
               </div>
-              <span class="hdb-company">Sterling Industrial Supply</span>
-              <div class="hdb-headline">Sterling Industrial names new VP of Operations</div>
-              <p class="hdb-analysis">New operations leadership typically reviews existing vendor relationships within the first 90 days — a high-value window for outreach.</p>
+              <div class="hdb-scrollbar-track">
+                <div class="hdb-scrollbar-thumb"></div>
+              </div>
             </div>
 
             <div class="hdb-more">+ 45 more signals today across 10 tracked categories</div>
@@ -4365,55 +4614,6 @@ if (form) {
 }
 </script>
 
-<script>
-(function () {
-  var hdbSignals = [
-    { badge: 'EXPANSION', badgeClass: 'expansion', fit: 91, fitClass: 'high', time: '2d ago', category: 'Manufacturing — Ohio capital project', company: 'Midwest Fabrication Co.', headline: 'Midwest Fabrication breaks ground on $42M Dayton expansion', analysis: 'New facility investment signals fresh equipment, staffing, and vendor needs during build-out — directly within target industry and geography.' },
-    { badge: 'LEADERSHIP', badgeClass: 'leadership', fit: 76, fitClass: 'mid', time: '5d ago', category: 'Operations — new VP hire', company: 'Sterling Industrial Supply', headline: 'Sterling Industrial names new VP of Operations', analysis: 'New operations leadership typically reviews existing vendor relationships within the first 90 days — a high-value window for outreach.' },
-    { badge: 'FUNDING', badgeClass: 'funding', fit: 88, fitClass: 'high', time: '1d ago', category: 'Growth capital — $18M raise', company: 'Ashcroft Metals Group', headline: 'Ashcroft Metals closes $18M growth funding round', analysis: 'Fresh capital often precedes equipment purchases and capacity investment — a strong early signal ahead of formal RFPs.' },
-    { badge: 'PRODUCT', badgeClass: 'product', fit: 63, fitClass: 'mid', time: '4d ago', category: 'New product line — automation', company: 'Bridgeline Equipment Co.', headline: 'Bridgeline Equipment launches new automation product line', analysis: 'New product launches often require new suppliers and partners to support production ramp-up.' },
-    { badge: 'ACQUISITION', badgeClass: 'acquisition', fit: 85, fitClass: 'high', time: '6d ago', category: 'M&A — plant integration', company: 'Ferro Dynamics Inc.', headline: 'Ferro Dynamics acquired by Meridian Industrial', analysis: 'Acquisitions frequently trigger vendor consolidation and systems integration — a high-value window to get in early.' },
-    { badge: 'HIRING', badgeClass: 'hiring', fit: 70, fitClass: 'mid', time: '3d ago', category: 'Hiring surge — 12 plant roles', company: 'Continental Alloy Works', headline: 'Continental Alloy posts 12 new plant roles', analysis: 'A hiring surge signals capacity growth and operational change — often a precursor to new vendor evaluations.' },
-    { badge: 'EXPANSION', badgeClass: 'expansion', fit: 79, fitClass: 'mid', time: '1w ago', category: 'Facility — new distribution center', company: 'Hartwell Logistics Group', headline: 'Hartwell Logistics opens second distribution center', analysis: 'New facilities mean new equipment, staffing, and systems needs — a strong window for outreach.' },
-    { badge: 'LEADERSHIP', badgeClass: 'leadership', fit: 58, fitClass: 'low', time: '2w ago', category: 'Executive — new CFO', company: 'Vantage Precision Parts', headline: 'Vantage Precision Parts appoints new CFO', analysis: 'New finance leadership often revisits budgets and vendor contracts within the first two quarters.' },
-    { badge: 'FUNDING', badgeClass: 'funding', fit: 92, fitClass: 'high', time: '12h ago', category: 'Series C — $40M raise', company: 'Ironclad Robotics', headline: 'Ironclad Robotics raises $40M Series C', analysis: 'Large funding rounds usually fund headcount and infrastructure growth — an early, high-fit signal.' },
-    { badge: 'PRODUCT', badgeClass: 'product', fit: 67, fitClass: 'mid', time: '8d ago', category: 'New product — smart sensors', company: 'Beacon Industrial Systems', headline: 'Beacon Industrial launches smart sensor product line', analysis: 'New product lines often require new supply chain and integration partners to support rollout.' }
-  ];
-
-  var hdbCard1 = document.getElementById('hdbCard1');
-  var hdbCard2 = document.getElementById('hdbCard2');
-  if (!hdbCard1 || !hdbCard2) return;
-
-  function hdbRenderCard(el, item) {
-    var badgeEl = el.querySelector('.hdb-badge');
-    badgeEl.className = 'hdb-badge hdb-badge-' + item.badgeClass;
-    badgeEl.textContent = item.badge;
-    var fitEl = el.querySelector('.hdb-fit');
-    fitEl.className = 'hdb-fit hdb-fit-' + item.fitClass;
-    fitEl.textContent = item.fit + '% Fit';
-    el.querySelector('.hdb-time').textContent = item.time;
-    el.querySelector('.hdb-category').textContent = '·  ' + item.category;
-    el.querySelector('.hdb-company').textContent = item.company;
-    el.querySelector('.hdb-headline').textContent = item.headline;
-    el.querySelector('.hdb-analysis').textContent = item.analysis;
-  }
-
-  var hdbIndex = 2;
-  function hdbSwap() {
-    hdbCard1.style.opacity = '0';
-    hdbCard2.style.opacity = '0';
-    setTimeout(function () {
-      hdbRenderCard(hdbCard1, hdbSignals[hdbIndex % hdbSignals.length]);
-      hdbRenderCard(hdbCard2, hdbSignals[(hdbIndex + 1) % hdbSignals.length]);
-      hdbIndex = (hdbIndex + 2) % hdbSignals.length;
-      hdbCard1.style.opacity = '1';
-      hdbCard2.style.opacity = '1';
-    }, 400);
-  }
-
-  setInterval(hdbSwap, 5000);
-})();
-</script>
 
 
 </body></html>
