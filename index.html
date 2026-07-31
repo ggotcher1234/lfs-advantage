@@ -219,7 +219,7 @@
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.6);
+    color: rgba(244,241,236,0.88);
     margin-bottom: 12px;
   }
   .hero-dashboard-dot {
@@ -258,21 +258,42 @@
   .hdb-body { padding: 22px 24px 24px; }
 
   .hdb-stats {
-    display: flex; gap: 18px; flex-wrap: wrap;
-    font-size: 12px; color: rgba(244,241,236,0.55);
-    letter-spacing: 0.02em;
-    margin-bottom: 16px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
   }
-  .hdb-stats strong { color: #F4F1EC; font-weight: 600; }
+  .hdb-stat-card {
+    display: flex; align-items: center; gap: 10px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 10px 12px;
+  }
+  .hdb-stat-icon {
+    width: 32px; height: 32px; flex-shrink: 0;
+    border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px;
+  }
+  .hdb-stat-icon-coral { background: rgba(232,97,74,0.18); }
+  .hdb-stat-icon-green { background: rgba(90,176,126,0.18); }
+  .hdb-stat-icon-gold { background: rgba(240,185,66,0.18); }
+  .hdb-stat-text { display: flex; flex-direction: column; min-width: 0; }
+  .hdb-stat-label {
+    font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(244,241,236,0.6);
+  }
+  .hdb-stat-number { font-size: 19px; font-weight: 700; color: #F4F1EC; line-height: 1.25; }
+  .hdb-stat-spark { margin-left: auto; flex-shrink: 0; opacity: 0.9; }
 
   .hdb-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
   .hdb-chip {
     font-size: 11px; letter-spacing: 0.03em; font-weight: 500;
     padding: 6px 12px; border-radius: 20px;
     border: 1px solid rgba(255,255,255,0.12);
-    color: rgba(244,241,236,0.55);
+    color: rgba(244,241,236,0.68);
     white-space: nowrap;
   }
   .hdb-chip-active {
@@ -291,7 +312,7 @@
   .hdb-card-meta {
     display: flex; align-items: center; gap: 10px;
     font-size: 11px; letter-spacing: 0.02em;
-    color: rgba(244,241,236,0.45);
+    color: rgba(244,241,236,0.6);
     margin-bottom: 9px;
   }
   .hdb-badge {
@@ -338,9 +359,41 @@
   .hdb-more {
     text-align: center;
     font-size: 11.5px; letter-spacing: 0.03em;
-    color: rgba(244,241,236,0.4);
+    color: rgba(244,241,236,0.7);
     padding-top: 4px;
   }
+
+  /* Top stat row — sits above the dashboard panel */
+  .hdb-top-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .hdb-top-stat-card {
+    display: flex; align-items: center; gap: 10px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .hdb-top-stat-icon {
+    width: 34px; height: 34px; flex-shrink: 0;
+    border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+  .hdb-top-stat-icon-blue { background: rgba(91,141,239,0.18); }
+  .hdb-top-stat-icon-green { background: rgba(90,176,126,0.18); }
+  .hdb-top-stat-icon-purple { background: rgba(178,120,222,0.18); }
+  .hdb-top-stat-text { display: flex; flex-direction: column; min-width: 0; }
+  .hdb-top-stat-label {
+    font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(244,241,236,0.65);
+  }
+  .hdb-top-stat-number { font-size: 20px; font-weight: 700; color: #F4F1EC; line-height: 1.3; }
+  .hdb-top-stat-caption { font-size: 11px; color: rgba(244,241,236,0.55); }
 
   @media (max-width: 640px) {
     .hdb-body { padding: 18px; }
@@ -2529,6 +2582,32 @@
     <!-- RIGHT: Animated market grid -->
     <div class="hero-visual">
       <div class="hero-dashboard-wrap">
+        <div class="hdb-top-stats">
+          <div class="hdb-top-stat-card">
+            <div class="hdb-top-stat-icon hdb-top-stat-icon-blue">📰</div>
+            <div class="hdb-top-stat-text">
+              <span class="hdb-top-stat-label">Articles</span>
+              <span class="hdb-top-stat-number">7,387</span>
+              <span class="hdb-top-stat-caption">in feed</span>
+            </div>
+          </div>
+          <div class="hdb-top-stat-card">
+            <div class="hdb-top-stat-icon hdb-top-stat-icon-green">📡</div>
+            <div class="hdb-top-stat-text">
+              <span class="hdb-top-stat-label">Signals</span>
+              <span class="hdb-top-stat-number">1,837</span>
+              <span class="hdb-top-stat-caption">analyzed</span>
+            </div>
+          </div>
+          <div class="hdb-top-stat-card">
+            <div class="hdb-top-stat-icon hdb-top-stat-icon-purple">⭐</div>
+            <div class="hdb-top-stat-text">
+              <span class="hdb-top-stat-label">Opportunities</span>
+              <span class="hdb-top-stat-number">565</span>
+              <span class="hdb-top-stat-caption">score ≥ 75% fit</span>
+            </div>
+          </div>
+        </div>
         <div class="hero-dashboard-label">
           <span class="hero-dashboard-dot"></span>
           Live — Intercept Advantage dashboard
@@ -2536,11 +2615,6 @@
         <div class="hdb-panel" role="img" aria-label="Intercept Advantage dashboard showing AI-scored signals of change, including facility expansion and leadership change articles with fit scores and reasoning">
           <div class="hdb-topbar"></div>
           <div class="hdb-body">
-            <div class="hdb-stats">
-              <span><strong>218</strong> in-market today</span>
-              <span><strong>47</strong> new signals / day</span>
-              <span><strong>1,904</strong> verified contacts</span>
-            </div>
             <div class="hdb-filters">
               <span class="hdb-chip hdb-chip-active">Facility Expansions · 518</span>
               <span class="hdb-chip">Leadership Changes · 97</span>
