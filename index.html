@@ -83,18 +83,18 @@
     background: rgba(17,17,17,0.92); /* keep dark */
     backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border);
-    height: 72px; /* explicit height so hero padding-top matches */
+    height: 92px; /* explicit height so hero padding-top matches */
   }
 
   .nav-brand {
     display: flex;
     flex-direction: column;
-    gap: 1px;
+    gap: 2px;
     text-decoration: none;
   }
   .nav-brand-primary {
     font-family: 'Fraunces', serif;
-    font-size: 19px;
+    font-size: 30px;
     font-weight: 800;
     letter-spacing: -0.02em;
     line-height: 1.1;
@@ -108,7 +108,7 @@
     color: transparent;
   }
   .nav-brand-sub {
-    font-size: 9.5px;
+    font-size: 11.5px;
     font-weight: 600;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -122,7 +122,7 @@
     text-decoration: none; flex-shrink: 0;
   }
   .nav-logo-mark {
-    width: 34px; height: 34px; flex-shrink: 0;
+    width: 50px; height: 50px; flex-shrink: 0;
     display: block;
   }
   .logo-letters {
@@ -170,7 +170,7 @@
     min-height: 100vh;
     display: flex; flex-direction: column;
     position: relative; overflow: hidden;
-    padding-top: 110px; /* 38px announce bar + 72px nav */
+    padding-top: 130px; /* 38px announce bar + 92px nav */
   }
 
   .hero-bg {
@@ -219,7 +219,7 @@
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.45);
+    color: rgba(255,255,255,0.6);
     margin-bottom: 12px;
   }
   .hero-dashboard-dot {
@@ -239,6 +239,112 @@
     border: 1px solid rgba(255,255,255,0.1);
     box-shadow: 0 24px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05);
     display: block;
+  }
+
+  /* ─── HERO DASHBOARD MOCKUP (live HTML, not an image) ────── */
+  .hdb-panel {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 24px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05);
+    background:
+      radial-gradient(ellipse 60% 45% at 12% 5%, rgba(232,97,74,0.16) 0%, transparent 60%),
+      radial-gradient(ellipse 55% 45% at 95% 100%, rgba(240,185,66,0.12) 0%, transparent 55%),
+      #1B1613;
+    overflow: hidden;
+  }
+  .hdb-topbar { height: 4px; background: linear-gradient(90deg, var(--coral), var(--gold)); }
+  .hdb-body { padding: 22px 24px 24px; }
+
+  .hdb-stats {
+    display: flex; gap: 18px; flex-wrap: wrap;
+    font-size: 12px; color: rgba(244,241,236,0.55);
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .hdb-stats strong { color: #F4F1EC; font-weight: 600; }
+
+  .hdb-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+  .hdb-chip {
+    font-size: 11px; letter-spacing: 0.03em; font-weight: 500;
+    padding: 6px 12px; border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(244,241,236,0.55);
+    white-space: nowrap;
+  }
+  .hdb-chip-active {
+    border-color: var(--coral);
+    background: rgba(232,97,74,0.14);
+    color: #F4F1EC;
+  }
+
+  .hdb-card {
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+  }
+  .hdb-card-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 11px; letter-spacing: 0.02em;
+    color: rgba(244,241,236,0.45);
+    margin-bottom: 9px;
+  }
+  .hdb-badge {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.06em;
+    padding: 3px 8px; border-radius: 4px;
+  }
+  .hdb-badge-expansion { background: rgba(90,176,126,0.16); color: #5AB07E; }
+  .hdb-badge-leadership { background: rgba(240,185,66,0.16); color: #F0B942; }
+  .hdb-fit { font-weight: 700; }
+  .hdb-fit-high { color: #5AB07E; }
+  .hdb-fit-mid { color: #F0B942; }
+
+  .hdb-company {
+    display: block;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.01em;
+    color: var(--coral);
+    margin-bottom: 4px;
+  }
+  .hdb-headline {
+    font-size: 15px; font-weight: 600; line-height: 1.35;
+    color: #F4F1EC;
+    margin-bottom: 8px;
+  }
+  .hdb-analysis {
+    font-size: 12.5px; line-height: 1.55;
+    color: rgba(244,241,236,0.55);
+    margin-bottom: 12px;
+  }
+  .hdb-actions { display: flex; gap: 8px; }
+  .hdb-btn {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.03em;
+    padding: 7px 12px; border-radius: 4px;
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .hdb-btn-primary {
+    background: linear-gradient(135deg, var(--coral), var(--gold));
+    color: #1A1A1A;
+  }
+  .hdb-btn-ghost {
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(244,241,236,0.7);
+  }
+
+  .hdb-more {
+    text-align: center;
+    font-size: 11.5px; letter-spacing: 0.03em;
+    color: rgba(244,241,236,0.4);
+    padding-top: 4px;
+  }
+
+  @media (max-width: 640px) {
+    .hdb-body { padding: 18px; }
+    .hdb-headline { font-size: 14px; }
   }
 
   /* Right column — fill the full column, centered */
@@ -2174,7 +2280,7 @@
   #hero { color: #FFFFFF; }
   #hero .hero-eyebrow { color: var(--coral); }
   #hero .hero-sub { color: rgba(255,255,255,0.75); }
-  #hero .hero-sub-powered { color: rgba(255,255,255,0.35); }
+  #hero .hero-sub-powered { color: rgba(255,255,255,0.55); }
   #hero .hgl-item { color: rgba(255,255,255,0.6); font-size: 12px; }
   #hero .hero-grid-label { color: rgba(255,255,255,0.5); }
   #hero h1 { color: #FFFFFF; }
@@ -2408,7 +2514,7 @@
         with the right decision-makers, and manage every opportunity from discovery through outreach.
       </p>
       <p class="hero-sub-powered">
-        AI finds the signals. We find the opportunities. &nbsp;·&nbsp; Powered by FeedMe Pro &nbsp;·&nbsp; Delivered by Leadforce Solutions
+        AI finds the signals. We find the opportunities.
       </p>
       <div class="hero-actions">
         <a href="#cta" class="btn-primary">See What We'd Track for You</a>
@@ -2425,9 +2531,51 @@
       <div class="hero-dashboard-wrap">
         <div class="hero-dashboard-label">
           <span class="hero-dashboard-dot"></span>
-          Live — FeedMe Pro dashboard
+          Live — Intercept Advantage dashboard
         </div>
-        <img src="assets/dashboard-preview.svg" alt="FeedMe Pro intelligence dashboard" class="hero-dashboard-img">
+        <div class="hdb-panel" role="img" aria-label="Intercept Advantage dashboard showing AI-scored signals of change, including facility expansion and leadership change articles with fit scores and reasoning">
+          <div class="hdb-topbar"></div>
+          <div class="hdb-body">
+            <div class="hdb-stats">
+              <span><strong>218</strong> in-market today</span>
+              <span><strong>47</strong> new signals / day</span>
+              <span><strong>1,904</strong> verified contacts</span>
+            </div>
+            <div class="hdb-filters">
+              <span class="hdb-chip hdb-chip-active">Facility Expansions · 518</span>
+              <span class="hdb-chip">Leadership Changes · 97</span>
+              <span class="hdb-chip">Funding / Investment · 355</span>
+              <span class="hdb-chip">Acquisitions / Mergers · 53</span>
+              <span class="hdb-chip">New Product Launches · 9</span>
+            </div>
+
+            <div class="hdb-card">
+              <div class="hdb-card-meta">
+                <span class="hdb-badge hdb-badge-expansion">EXPANSION</span>
+                <span class="hdb-fit hdb-fit-high">91% Fit</span>
+                <span>2d ago</span>
+                <span>·&nbsp; Manufacturing — Ohio capital project</span>
+              </div>
+              <span class="hdb-company">Midwest Fabrication Co.</span>
+              <div class="hdb-headline">Midwest Fabrication breaks ground on $42M Dayton expansion</div>
+              <p class="hdb-analysis">New facility investment signals fresh equipment, staffing, and vendor needs during build-out — directly within target industry and geography.</p>
+            </div>
+
+            <div class="hdb-card">
+              <div class="hdb-card-meta">
+                <span class="hdb-badge hdb-badge-leadership">LEADERSHIP</span>
+                <span class="hdb-fit hdb-fit-mid">76% Fit</span>
+                <span>5d ago</span>
+                <span>·&nbsp; Operations — new VP hire</span>
+              </div>
+              <span class="hdb-company">Sterling Industrial Supply</span>
+              <div class="hdb-headline">Sterling Industrial names new VP of Operations</div>
+              <p class="hdb-analysis">New operations leadership typically reviews existing vendor relationships within the first 90 days — a high-value window for outreach.</p>
+            </div>
+
+            <div class="hdb-more">+ 45 more signals today across 10 tracked categories</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
