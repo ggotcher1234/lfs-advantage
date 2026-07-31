@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" role="img" aria-label="Opportunity Tracker table preview">
+  <rect width="1200" height="480" fill="#FDFCFA"/>
+  <rect x="0.5" y="0.5" width="1199" height="479" fill="none" stroke="rgba(0,0,0,0.1)"/>
+  <g font-family="Barlow, Arial, sans-serif">
+    <rect x="0" y="0" width="1200" height="48" fill="#F4F1EC"/>
+    <text x="32" y="30" fill="#1A1A1A" font-size="13" font-weight="600" letter-spacing="0.5">COMPANY</text>
+    <text x="360" y="30" fill="#1A1A1A" font-size="13" font-weight="600" letter-spacing="0.5">SIGNAL</text>
+    <text x="700" y="30" fill="#1A1A1A" font-size="13" font-weight="600" letter-spacing="0.5">SCORE</text>
+    <text x="840" y="30" fill="#1A1A1A" font-size="13" font-weight="600" letter-spacing="0.5">CONTACT</text>
+    <text x="1040" y="30" fill="#1A1A1A" font-size="13" font-weight="600" letter-spacing="0.5">STAGE</text>
+    <g stroke="rgba(0,0,0,0.08)">
+      <line x1="0" y1="48" x2="1200" y2="48"/>
+      <line x1="0" y1="120" x2="1200" y2="120"/>
+      <line x1="0" y1="192" x2="1200" y2="192"/>
+      <line x1="0" y1="264" x2="1200" y2="264"/>
+      <line x1="0" y1="336" x2="1200" y2="336"/>
+      <line x1="0" y1="408" x2="1200" y2="408"/>
+    </g>
+
+    <!-- Row 1 -->
+    <text x="32" y="90" fill="#1A1A1A" font-size="14.5" font-weight="600">Midwest Fabrication Co.</text>
+    <text x="360" y="90" fill="rgba(26,26,26,0.65)" font-size="13.5">New facility announced — 45,000 sq ft</text>
+    <rect x="700" y="76" width="46" height="22" rx="11" fill="#5AB07E" opacity="0.18"/>
+    <text x="723" y="91" fill="#3E8A5E" font-size="13" font-weight="700" text-anchor="middle">92</text>
+    <text x="840" y="90" fill="rgba(26,26,26,0.75)" font-size="13.5">Sarah Chen, VP Ops</text>
+    <text x="1040" y="90" fill="rgba(26,26,26,0.75)" font-size="13.5">Contacted</text>
+
+    <!-- Row 2 -->
+    <text x="32" y="162" fill="#1A1A1A" font-size="14.5" font-weight="600">Sterling Industrial Supply</text>
+    <text x="360" y="162" fill="rgba(26,26,26,0.65)" font-size="13.5">Leadership change: new VP of Ops</text>
+    <rect x="700" y="148" width="46" height="22" rx="11" fill="#F0B942" opacity="0.22"/>
+    <text x="723" y="163" fill="#9C7A1E" font-size="13" font-weight="700" text-anchor="middle">76</text>
+    <text x="840" y="162" fill="rgba(26,26,26,0.75)" font-size="13.5">David Park, COO</text>
+    <text x="1040" y="162" fill="rgba(26,26,26,0.75)" font-size="13.5">Researching</text>
+
+    <!-- Row 3 -->
+    <text x="32" y="234" fill="#1A1A1A" font-size="14.5" font-weight="600">Ashcroft Metals Group</text>
+    <text x="360" y="234" fill="rgba(26,26,26,0.65)" font-size="13.5">$18M funding round closed</text>
+    <rect x="700" y="220" width="46" height="22" rx="11" fill="#5AB07E" opacity="0.18"/>
+    <text x="723" y="235" fill="#3E8A5E" font-size="13" font-weight="700" text-anchor="middle">88</text>
+    <text x="840" y="234" fill="rgba(26,26,26,0.75)" font-size="13.5">Maria Lopez, CFO</text>
+    <text x="1040" y="234" fill="rgba(26,26,26,0.75)" font-size="13.5">Contacted</text>
+
+    <!-- Row 4 -->
+    <text x="32" y="306" fill="#1A1A1A" font-size="14.5" font-weight="600">Bridgeline Equipment Co.</text>
+    <text x="360" y="306" fill="rgba(26,26,26,0.65)" font-size="13.5">New product line launched</text>
+    <rect x="700" y="292" width="46" height="22" rx="11" fill="#F0B942" opacity="0.22"/>
+    <text x="723" y="307" fill="#9C7A1E" font-size="13" font-weight="700" text-anchor="middle">63</text>
+    <text x="840" y="306" fill="rgba(26,26,26,0.75)" font-size="13.5">James Wu, Dir. Eng</text>
+    <text x="1040" y="306" fill="rgba(26,26,26,0.75)" font-size="13.5">New</text>
+
+    <!-- Row 5 -->
+    <text x="32" y="378" fill="#1A1A1A" font-size="14.5" font-weight="600">Ferro Dynamics Inc.</text>
+    <text x="360" y="378" fill="rgba(26,26,26,0.65)" font-size="13.5">Acquired by Meridian Industrial</text>
+    <rect x="700" y="364" width="46" height="22" rx="11" fill="#5AB07E" opacity="0.18"/>
+    <text x="723" y="379" fill="#3E8A5E" font-size="13" font-weight="700" text-anchor="middle">85</text>
+    <text x="840" y="378" fill="rgba(26,26,26,0.75)" font-size="13.5">Angela Ruiz, VP Ops</text>
+    <text x="1040" y="378" fill="rgba(26,26,26,0.75)" font-size="13.5">Contacted</text>
+
+    <!-- Row 6 -->
+    <text x="32" y="450" fill="#1A1A1A" font-size="14.5" font-weight="600">Continental Alloy Works</text>
+    <text x="360" y="450" fill="rgba(26,26,26,0.65)" font-size="13.5">Hiring surge: 12 plant roles posted</text>
+    <rect x="700" y="436" width="46" height="22" rx="11" fill="#F0B942" opacity="0.22"/>
+    <text x="723" y="451" fill="#9C7A1E" font-size="13" font-weight="700" text-anchor="middle">70</text>
+    <text x="840" y="450" fill="rgba(26,26,26,0.75)" font-size="13.5">Tom Bennett, Plant Mgr</text>
+    <text x="1040" y="450" fill="rgba(26,26,26,0.75)" font-size="13.5">New</text>
+  </g>
+</svg>
