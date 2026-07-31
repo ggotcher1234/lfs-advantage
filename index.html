@@ -176,8 +176,10 @@
   .hero-bg {
     position: absolute; inset: 0;
     background:
-      radial-gradient(ellipse 42% 60% at 22% 48%, rgba(232,97,74,0.12) 0%, transparent 58%),
-      radial-gradient(ellipse 20% 35% at 8% 90%, rgba(240,185,66,0.07) 0%, transparent 50%),
+      radial-gradient(ellipse 42% 60% at 22% 48%, rgba(232,97,74,0.15) 0%, transparent 58%),
+      radial-gradient(ellipse 20% 35% at 8% 90%, rgba(240,185,66,0.09) 0%, transparent 50%),
+      radial-gradient(ellipse 55% 65% at 78% 30%, rgba(232,97,74,0.1) 0%, transparent 62%),
+      radial-gradient(ellipse 40% 45% at 95% 85%, rgba(240,185,66,0.08) 0%, transparent 55%),
       var(--hero-bg);
   }
 
@@ -308,6 +310,7 @@
     border-radius: 8px;
     padding: 16px 18px;
     margin-bottom: 12px;
+    transition: opacity 0.4s ease;
   }
   .hdb-card-meta {
     display: flex; align-items: center; gap: 10px;
@@ -321,9 +324,14 @@
   }
   .hdb-badge-expansion { background: rgba(90,176,126,0.16); color: #5AB07E; }
   .hdb-badge-leadership { background: rgba(240,185,66,0.16); color: #F0B942; }
+  .hdb-badge-funding { background: rgba(91,141,239,0.16); color: #7BA3F5; }
+  .hdb-badge-product { background: rgba(178,120,222,0.16); color: #C79BE8; }
+  .hdb-badge-acquisition { background: rgba(232,97,74,0.16); color: #E8614A; }
+  .hdb-badge-hiring { background: rgba(79,184,175,0.16); color: #6FC8C0; }
   .hdb-fit { font-weight: 700; }
   .hdb-fit-high { color: #5AB07E; }
   .hdb-fit-mid { color: #F0B942; }
+  .hdb-fit-low { color: #E8614A; }
 
   .hdb-company {
     display: block;
@@ -372,10 +380,11 @@
   }
   .hdb-top-stat-card {
     display: flex; align-items: center; gap: 10px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: #F7F5F1;
+    border: 1px solid rgba(0,0,0,0.06);
     border-radius: 8px;
     padding: 12px 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.02);
   }
   .hdb-top-stat-icon {
     width: 34px; height: 34px; flex-shrink: 0;
@@ -383,17 +392,17 @@
     display: flex; align-items: center; justify-content: center;
     font-size: 16px;
   }
-  .hdb-top-stat-icon-blue { background: rgba(91,141,239,0.18); }
+  .hdb-top-stat-icon-blue { background: rgba(91,141,239,0.16); }
   .hdb-top-stat-icon-green { background: rgba(90,176,126,0.18); }
-  .hdb-top-stat-icon-purple { background: rgba(178,120,222,0.18); }
+  .hdb-top-stat-icon-purple { background: rgba(178,120,222,0.16); }
   .hdb-top-stat-text { display: flex; flex-direction: column; min-width: 0; }
   .hdb-top-stat-label {
     font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: rgba(244,241,236,0.65);
+    color: rgba(26,26,26,0.55);
   }
-  .hdb-top-stat-number { font-size: 20px; font-weight: 700; color: #F4F1EC; line-height: 1.3; }
-  .hdb-top-stat-caption { font-size: 11px; color: rgba(244,241,236,0.55); }
+  .hdb-top-stat-number { font-size: 20px; font-weight: 700; color: #1A1A1A; line-height: 1.3; }
+  .hdb-top-stat-caption { font-size: 11px; color: rgba(26,26,26,0.5); }
 
   @media (max-width: 640px) {
     .hdb-body { padding: 18px; }
@@ -2623,24 +2632,24 @@
               <span class="hdb-chip">New Product Launches · 9</span>
             </div>
 
-            <div class="hdb-card">
+            <div class="hdb-card" id="hdbCard1">
               <div class="hdb-card-meta">
                 <span class="hdb-badge hdb-badge-expansion">EXPANSION</span>
                 <span class="hdb-fit hdb-fit-high">91% Fit</span>
-                <span>2d ago</span>
-                <span>·&nbsp; Manufacturing — Ohio capital project</span>
+                <span class="hdb-time">2d ago</span>
+                <span class="hdb-category">·&nbsp; Manufacturing — Ohio capital project</span>
               </div>
               <span class="hdb-company">Midwest Fabrication Co.</span>
               <div class="hdb-headline">Midwest Fabrication breaks ground on $42M Dayton expansion</div>
               <p class="hdb-analysis">New facility investment signals fresh equipment, staffing, and vendor needs during build-out — directly within target industry and geography.</p>
             </div>
 
-            <div class="hdb-card">
+            <div class="hdb-card" id="hdbCard2">
               <div class="hdb-card-meta">
                 <span class="hdb-badge hdb-badge-leadership">LEADERSHIP</span>
                 <span class="hdb-fit hdb-fit-mid">76% Fit</span>
-                <span>5d ago</span>
-                <span>·&nbsp; Operations — new VP hire</span>
+                <span class="hdb-time">5d ago</span>
+                <span class="hdb-category">·&nbsp; Operations — new VP hire</span>
               </div>
               <span class="hdb-company">Sterling Industrial Supply</span>
               <div class="hdb-headline">Sterling Industrial names new VP of Operations</div>
@@ -4356,6 +4365,55 @@ if (form) {
 }
 </script>
 
+<script>
+(function () {
+  var hdbSignals = [
+    { badge: 'EXPANSION', badgeClass: 'expansion', fit: 91, fitClass: 'high', time: '2d ago', category: 'Manufacturing — Ohio capital project', company: 'Midwest Fabrication Co.', headline: 'Midwest Fabrication breaks ground on $42M Dayton expansion', analysis: 'New facility investment signals fresh equipment, staffing, and vendor needs during build-out — directly within target industry and geography.' },
+    { badge: 'LEADERSHIP', badgeClass: 'leadership', fit: 76, fitClass: 'mid', time: '5d ago', category: 'Operations — new VP hire', company: 'Sterling Industrial Supply', headline: 'Sterling Industrial names new VP of Operations', analysis: 'New operations leadership typically reviews existing vendor relationships within the first 90 days — a high-value window for outreach.' },
+    { badge: 'FUNDING', badgeClass: 'funding', fit: 88, fitClass: 'high', time: '1d ago', category: 'Growth capital — $18M raise', company: 'Ashcroft Metals Group', headline: 'Ashcroft Metals closes $18M growth funding round', analysis: 'Fresh capital often precedes equipment purchases and capacity investment — a strong early signal ahead of formal RFPs.' },
+    { badge: 'PRODUCT', badgeClass: 'product', fit: 63, fitClass: 'mid', time: '4d ago', category: 'New product line — automation', company: 'Bridgeline Equipment Co.', headline: 'Bridgeline Equipment launches new automation product line', analysis: 'New product launches often require new suppliers and partners to support production ramp-up.' },
+    { badge: 'ACQUISITION', badgeClass: 'acquisition', fit: 85, fitClass: 'high', time: '6d ago', category: 'M&A — plant integration', company: 'Ferro Dynamics Inc.', headline: 'Ferro Dynamics acquired by Meridian Industrial', analysis: 'Acquisitions frequently trigger vendor consolidation and systems integration — a high-value window to get in early.' },
+    { badge: 'HIRING', badgeClass: 'hiring', fit: 70, fitClass: 'mid', time: '3d ago', category: 'Hiring surge — 12 plant roles', company: 'Continental Alloy Works', headline: 'Continental Alloy posts 12 new plant roles', analysis: 'A hiring surge signals capacity growth and operational change — often a precursor to new vendor evaluations.' },
+    { badge: 'EXPANSION', badgeClass: 'expansion', fit: 79, fitClass: 'mid', time: '1w ago', category: 'Facility — new distribution center', company: 'Hartwell Logistics Group', headline: 'Hartwell Logistics opens second distribution center', analysis: 'New facilities mean new equipment, staffing, and systems needs — a strong window for outreach.' },
+    { badge: 'LEADERSHIP', badgeClass: 'leadership', fit: 58, fitClass: 'low', time: '2w ago', category: 'Executive — new CFO', company: 'Vantage Precision Parts', headline: 'Vantage Precision Parts appoints new CFO', analysis: 'New finance leadership often revisits budgets and vendor contracts within the first two quarters.' },
+    { badge: 'FUNDING', badgeClass: 'funding', fit: 92, fitClass: 'high', time: '12h ago', category: 'Series C — $40M raise', company: 'Ironclad Robotics', headline: 'Ironclad Robotics raises $40M Series C', analysis: 'Large funding rounds usually fund headcount and infrastructure growth — an early, high-fit signal.' },
+    { badge: 'PRODUCT', badgeClass: 'product', fit: 67, fitClass: 'mid', time: '8d ago', category: 'New product — smart sensors', company: 'Beacon Industrial Systems', headline: 'Beacon Industrial launches smart sensor product line', analysis: 'New product lines often require new supply chain and integration partners to support rollout.' }
+  ];
+
+  var hdbCard1 = document.getElementById('hdbCard1');
+  var hdbCard2 = document.getElementById('hdbCard2');
+  if (!hdbCard1 || !hdbCard2) return;
+
+  function hdbRenderCard(el, item) {
+    var badgeEl = el.querySelector('.hdb-badge');
+    badgeEl.className = 'hdb-badge hdb-badge-' + item.badgeClass;
+    badgeEl.textContent = item.badge;
+    var fitEl = el.querySelector('.hdb-fit');
+    fitEl.className = 'hdb-fit hdb-fit-' + item.fitClass;
+    fitEl.textContent = item.fit + '% Fit';
+    el.querySelector('.hdb-time').textContent = item.time;
+    el.querySelector('.hdb-category').textContent = '·  ' + item.category;
+    el.querySelector('.hdb-company').textContent = item.company;
+    el.querySelector('.hdb-headline').textContent = item.headline;
+    el.querySelector('.hdb-analysis').textContent = item.analysis;
+  }
+
+  var hdbIndex = 2;
+  function hdbSwap() {
+    hdbCard1.style.opacity = '0';
+    hdbCard2.style.opacity = '0';
+    setTimeout(function () {
+      hdbRenderCard(hdbCard1, hdbSignals[hdbIndex % hdbSignals.length]);
+      hdbRenderCard(hdbCard2, hdbSignals[(hdbIndex + 1) % hdbSignals.length]);
+      hdbIndex = (hdbIndex + 2) % hdbSignals.length;
+      hdbCard1.style.opacity = '1';
+      hdbCard2.style.opacity = '1';
+    }, 400);
+  }
+
+  setInterval(hdbSwap, 5000);
+})();
+</script>
 
 
 </body></html>
