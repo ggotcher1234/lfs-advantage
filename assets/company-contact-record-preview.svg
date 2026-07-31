@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-label="Company / Contact Record detail preview placeholder">
+  <rect width="1000" height="600" fill="#FDFCFA"/>
+  <rect x="0.5" y="0.5" width="999" height="599" fill="none" stroke="rgba(0,0,0,0.1)"/>
+  <g font-family="Barlow, Arial, sans-serif">
+    <rect x="0" y="0" width="1000" height="72" fill="#F4F1EC"/>
+    <rect x="32" y="22" width="220" height="18" rx="3" fill="rgba(26,26,26,0.5)"/>
+    <rect x="32" y="46" width="140" height="12" rx="3" fill="rgba(26,26,26,0.2)"/>
+    <rect x="840" y="24" width="128" height="26" rx="13" fill="#5AB07E" opacity="0.35"/>
+
+    <!-- left column: company + signal -->
+    <rect x="32" y="96" width="580" height="150" rx="8" fill="rgba(26,26,26,0.03)" stroke="rgba(0,0,0,0.08)"/>
+    <text x="52" y="122" fill="rgba(26,26,26,0.4)" font-size="11" letter-spacing="1">SIGNAL SUMMARY</text>
+    <rect x="52" y="136" width="520" height="12" rx="3" fill="rgba(26,26,26,0.12)"/>
+    <rect x="52" y="156" width="480" height="12" rx="3" fill="rgba(26,26,26,0.1)"/>
+    <rect x="52" y="176" width="500" height="12" rx="3" fill="rgba(26,26,26,0.1)"/>
+    <rect x="52" y="204" width="90" height="20" rx="10" fill="#F0B942" opacity="0.35"/>
+    <rect x="152" y="204" width="110" height="20" rx="10" fill="#E8614A" opacity="0.25"/>
+
+    <rect x="32" y="262" width="580" height="150" rx="8" fill="rgba(26,26,26,0.03)" stroke="rgba(0,0,0,0.08)"/>
+    <text x="52" y="288" fill="rgba(26,26,26,0.4)" font-size="11" letter-spacing="1">AI-DRAFTED OUTREACH</text>
+    <rect x="52" y="304" width="520" height="10" rx="3" fill="rgba(26,26,26,0.1)"/>
+    <rect x="52" y="322" width="520" height="10" rx="3" fill="rgba(26,26,26,0.1)"/>
+    <rect x="52" y="340" width="380" height="10" rx="3" fill="rgba(26,26,26,0.1)"/>
+    <rect x="52" y="368" width="100" height="24" rx="4" fill="#1A1A1A" opacity="0.85"/>
+
+    <!-- right column: verified contacts -->
+    <rect x="628" y="96" width="340" height="316" rx="8" fill="rgba(26,26,26,0.03)" stroke="rgba(0,0,0,0.08)"/>
+    <text x="648" y="122" fill="rgba(26,26,26,0.4)" font-size="11" letter-spacing="1">VERIFIED CONTACTS</text>
+    <circle cx="660" cy="152" r="14" fill="rgba(26,26,26,0.15)"/>
+    <rect x="684" y="144" width="150" height="10" rx="3" fill="rgba(26,26,26,0.15)"/>
+    <rect x="684" y="160" width="110" height="9" rx="3" fill="rgba(26,26,26,0.08)"/>
+    <circle cx="660" cy="196" r="14" fill="rgba(26,26,26,0.15)"/>
+    <rect x="684" y="188" width="150" height="10" rx="3" fill="rgba(26,26,26,0.15)"/>
+    <rect x="684" y="204" width="110" height="9" rx="3" fill="rgba(26,26,26,0.08)"/>
+    <circle cx="660" cy="240" r="14" fill="rgba(26,26,26,0.15)"/>
+    <rect x="684" y="232" width="150" height="10" rx="3" fill="rgba(26,26,26,0.15)"/>
+    <rect x="684" y="248" width="110" height="9" rx="3" fill="rgba(26,26,26,0.08)"/>
+    <line x1="648" y1="276" x2="948" y2="276" stroke="rgba(0,0,0,0.08)"/>
+    <text x="648" y="298" fill="rgba(26,26,26,0.4)" font-size="11" letter-spacing="1">NOTES</text>
+    <rect x="648" y="312" width="300" height="9" rx="3" fill="rgba(26,26,26,0.08)"/>
+    <rect x="648" y="328" width="280" height="9" rx="3" fill="rgba(26,26,26,0.08)"/>
+    <rect x="648" y="344" width="260" height="9" rx="3" fill="rgba(26,26,26,0.08)"/>
+
+    <rect x="32" y="436" width="936" height="120" rx="8" fill="rgba(26,26,26,0.03)" stroke="rgba(0,0,0,0.08)"/>
+    <text x="52" y="462" fill="rgba(26,26,26,0.4)" font-size="11" letter-spacing="1">TIMELINE</text>
+    <circle cx="60" cy="490" r="4" fill="#5AB07E"/>
+    <rect x="76" y="484" width="300" height="10" rx="3" fill="rgba(26,26,26,0.1)"/>
+    <circle cx="60" cy="516" r="4" fill="#F0B942"/>
+    <rect x="76" y="510" width="260" height="10" rx="3" fill="rgba(26,26,26,0.1)"/>
+  </g>
+</svg>
