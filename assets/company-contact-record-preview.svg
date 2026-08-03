@@ -1,51 +1,197 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-label="Company / Contact Record detail preview placeholder">
-  <rect width="1000" height="600" fill="#FDFCFA"/>
-  <rect x="0.5" y="0.5" width="999" height="599" fill="none" stroke="rgba(0,0,0,0.1)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" role="img" aria-label="Company / Contact Record detail preview">
+  <rect width="1200" height="850" fill="#FFFFFF"/>
+  <rect x="0.5" y="0.5" width="1199" height="849" fill="none" stroke="rgba(0,0,0,0.1)"/>
   <g font-family="Barlow, Arial, sans-serif">
-    <rect x="0" y="0" width="1000" height="72" fill="#F4F1EC"/>
-    <rect x="32" y="22" width="220" height="18" rx="3" fill="rgba(26,26,26,0.5)"/>
-    <rect x="32" y="46" width="140" height="12" rx="3" fill="rgba(26,26,26,0.2)"/>
-    <rect x="840" y="24" width="128" height="26" rx="13" fill="#5AB07E" opacity="0.35"/>
 
-    <!-- left column: company + signal -->
-    <rect x="32" y="96" width="580" height="150" rx="8" fill="rgba(26,26,26,0.03)" stroke="rgba(0,0,0,0.08)"/>
-    <text x="52" y="122" fill="rgba(26,26,26,0.4)" font-size="11" letter-spacing="1">SIGNAL SUMMARY</text>
-    <rect x="52" y="136" width="520" height="12" rx="3" fill="rgba(26,26,26,0.12)"/>
-    <rect x="52" y="156" width="480" height="12" rx="3" fill="rgba(26,26,26,0.1)"/>
-    <rect x="52" y="176" width="500" height="12" rx="3" fill="rgba(26,26,26,0.1)"/>
-    <rect x="52" y="204" width="90" height="20" rx="10" fill="#F0B942" opacity="0.35"/>
-    <rect x="152" y="204" width="110" height="20" rx="10" fill="#E8614A" opacity="0.25"/>
+    <!-- ══ BREADCRUMB BAR ══ -->
+    <rect x="0" y="0" width="1200" height="40" fill="#14110F"/>
+    <text x="24" y="25" fill="rgba(255,255,255,0.35)" font-size="13">Pipeline /</text>
+    <text x="82" y="25" fill="rgba(255,255,255,0.85)" font-size="13" font-weight="600">Midwest Fabrication Co.</text>
+    <text x="1176" y="26" fill="rgba(255,255,255,0.5)" font-size="15" font-weight="700" text-anchor="end">&#10005;</text>
 
-    <rect x="32" y="262" width="580" height="150" rx="8" fill="rgba(26,26,26,0.03)" stroke="rgba(0,0,0,0.08)"/>
-    <text x="52" y="288" fill="rgba(26,26,26,0.4)" font-size="11" letter-spacing="1">AI-DRAFTED OUTREACH</text>
-    <rect x="52" y="304" width="520" height="10" rx="3" fill="rgba(26,26,26,0.1)"/>
-    <rect x="52" y="322" width="520" height="10" rx="3" fill="rgba(26,26,26,0.1)"/>
-    <rect x="52" y="340" width="380" height="10" rx="3" fill="rgba(26,26,26,0.1)"/>
-    <rect x="52" y="368" width="100" height="24" rx="4" fill="#1A1A1A" opacity="0.85"/>
+    <!-- ══ HEADER CARD ══ -->
+    <rect x="0" y="40" width="1200" height="190" fill="#FEFEFD"/>
+    <rect x="0" y="40" width="5" height="190" fill="#E8614A"/>
+    <line x1="0" y1="230" x2="1200" y2="230" stroke="rgba(0,0,0,0.08)"/>
 
-    <!-- right column: verified contacts -->
-    <rect x="628" y="96" width="340" height="316" rx="8" fill="rgba(26,26,26,0.03)" stroke="rgba(0,0,0,0.08)"/>
-    <text x="648" y="122" fill="rgba(26,26,26,0.4)" font-size="11" letter-spacing="1">VERIFIED CONTACTS</text>
-    <circle cx="660" cy="152" r="14" fill="rgba(26,26,26,0.15)"/>
-    <rect x="684" y="144" width="150" height="10" rx="3" fill="rgba(26,26,26,0.15)"/>
-    <rect x="684" y="160" width="110" height="9" rx="3" fill="rgba(26,26,26,0.08)"/>
-    <circle cx="660" cy="196" r="14" fill="rgba(26,26,26,0.15)"/>
-    <rect x="684" y="188" width="150" height="10" rx="3" fill="rgba(26,26,26,0.15)"/>
-    <rect x="684" y="204" width="110" height="9" rx="3" fill="rgba(26,26,26,0.08)"/>
-    <circle cx="660" cy="240" r="14" fill="rgba(26,26,26,0.15)"/>
-    <rect x="684" y="232" width="150" height="10" rx="3" fill="rgba(26,26,26,0.15)"/>
-    <rect x="684" y="248" width="110" height="9" rx="3" fill="rgba(26,26,26,0.08)"/>
-    <line x1="648" y1="276" x2="948" y2="276" stroke="rgba(0,0,0,0.08)"/>
-    <text x="648" y="298" fill="rgba(26,26,26,0.4)" font-size="11" letter-spacing="1">NOTES</text>
-    <rect x="648" y="312" width="300" height="9" rx="3" fill="rgba(26,26,26,0.08)"/>
-    <rect x="648" y="328" width="280" height="9" rx="3" fill="rgba(26,26,26,0.08)"/>
-    <rect x="648" y="344" width="260" height="9" rx="3" fill="rgba(26,26,26,0.08)"/>
+    <rect x="28" y="60" width="84" height="22" rx="11" fill="#2F8F82" opacity="0.14"/>
+    <text x="70" y="75" fill="#2F8F82" font-size="11" font-weight="700" text-anchor="middle">expansion</text>
+    <rect x="122" y="60" width="102" height="22" rx="11" fill="#5AB07E" opacity="0.2"/>
+    <text x="173" y="75" fill="#3E8A5E" font-size="11" font-weight="700" text-anchor="middle">6 days open</text>
 
-    <rect x="32" y="436" width="936" height="120" rx="8" fill="rgba(26,26,26,0.03)" stroke="rgba(0,0,0,0.08)"/>
-    <text x="52" y="462" fill="rgba(26,26,26,0.4)" font-size="11" letter-spacing="1">TIMELINE</text>
-    <circle cx="60" cy="490" r="4" fill="#5AB07E"/>
-    <rect x="76" y="484" width="300" height="10" rx="3" fill="rgba(26,26,26,0.1)"/>
-    <circle cx="60" cy="516" r="4" fill="#F0B942"/>
-    <rect x="76" y="510" width="260" height="10" rx="3" fill="rgba(26,26,26,0.1)"/>
+    <text x="1172" y="60" fill="rgba(26,26,26,0.4)" font-size="10" font-weight="700" letter-spacing="0.08em" text-anchor="end">MATCH SCORE</text>
+    <text x="1172" y="90" fill="#1A1A1A" font-size="32" font-weight="800" text-anchor="end">92</text>
+    <rect x="1042" y="100" width="130" height="6" rx="3" fill="rgba(0,0,0,0.08)"/>
+    <rect x="1042" y="100" width="120" height="6" rx="3" fill="#5AB07E"/>
+
+    <text x="28" y="122" fill="#1A1A1A" font-size="27" font-weight="800">Midwest Fabrication Co.</text>
+    <rect x="452" y="106" width="120" height="20" rx="10" fill="#F0B942" opacity="0.22"/>
+    <circle cx="468" cy="116" r="3" fill="#9C7A1E"/>
+    <text x="477" y="120" fill="#9C7A1E" font-size="10.5" font-weight="700">Target account</text>
+    <rect x="1042" y="102" width="130" height="26" rx="13" fill="#2F8F82"/>
+    <text x="1107" y="119" fill="#FFFFFF" font-size="12" font-weight="700" text-anchor="middle">Meeting Booked</text>
+
+    <text x="28" y="150" fill="rgba(26,26,26,0.45)" font-size="12">Marked 7/30/2026</text>
+    <text x="172" y="150" fill="rgba(26,26,26,0.45)" font-size="12">Detroit, MI &#183; Surfaced 7/28/2026</text>
+
+    <line x1="28" y1="168" x2="1172" y2="168" stroke="rgba(0,0,0,0.07)"/>
+
+    <text x="28" y="195" fill="rgba(26,26,26,0.4)" font-size="10" font-weight="700" letter-spacing="0.06em">ACCOUNT OPPORTUNITY</text>
+    <text x="28" y="216" fill="#1A1A1A" font-size="16" font-weight="700">$210K</text>
+
+    <text x="256" y="195" fill="rgba(26,26,26,0.4)" font-size="10" font-weight="700" letter-spacing="0.06em">PURSUING</text>
+    <text x="256" y="216" fill="#1A1A1A" font-size="16" font-weight="700">3 of 5</text>
+
+    <text x="484" y="195" fill="rgba(26,26,26,0.4)" font-size="10" font-weight="700" letter-spacing="0.06em">EMAILS</text>
+    <text x="484" y="216" fill="#1A1A1A" font-size="16" font-weight="700">4</text>
+
+    <text x="712" y="195" fill="rgba(26,26,26,0.4)" font-size="10" font-weight="700" letter-spacing="0.06em">NEXT STEP</text>
+    <text x="712" y="216" fill="#C9662E" font-size="16" font-weight="700">due in 2d</text>
+
+    <text x="940" y="195" fill="rgba(26,26,26,0.4)" font-size="10" font-weight="700" letter-spacing="0.06em">TARGET CLOSE</text>
+    <text x="940" y="216" fill="#1A1A1A" font-size="16" font-weight="700">09/18/2026</text>
+
+    <!-- ══ LEFT COLUMN ══ -->
+    <rect x="28" y="250" width="530" height="310" rx="8" fill="#FFFFFF" stroke="rgba(0,0,0,0.08)"/>
+    <rect x="48" y="270" width="9" height="9" fill="#3D5A80" transform="rotate(45 52.5 274.5)"/>
+    <text x="66" y="279" fill="rgba(26,26,26,0.4)" font-size="11" font-weight="700" letter-spacing="0.06em">OPPORTUNITY</text>
+    <text x="48" y="306" fill="rgba(26,26,26,0.68)" font-size="12.5">Midwest Fabrication Co. is breaking ground on a new</text>
+    <text x="48" y="324" fill="rgba(26,26,26,0.68)" font-size="12.5">45,000 sq ft facility &#8212; an active capital construction</text>
+    <text x="48" y="342" fill="rgba(26,26,26,0.68)" font-size="12.5">project entering its planning and execution phase.</text>
+    <text x="48" y="366" fill="rgba(26,26,26,0.45)" font-size="12">Source: <tspan fill="#3D5A80" font-weight="600">Midwest Fabrication breaks ground on new facility &#8599;</tspan></text>
+
+    <line x1="48" y1="384" x2="538" y2="384" stroke="rgba(0,0,0,0.06)"/>
+
+    <text x="48" y="408" fill="rgba(26,26,26,0.5)" font-size="12">Project value</text>
+    <text x="220" y="408" fill="#1A1A1A" font-size="12.5" font-weight="600">$210,000 &#8212; from article</text>
+    <text x="48" y="432" fill="rgba(26,26,26,0.5)" font-size="12">Account opportunity</text>
+    <text x="220" y="432" fill="#1A1A1A" font-size="12.5" font-weight="600">210,000</text>
+    <text x="48" y="456" fill="rgba(26,26,26,0.5)" font-size="12">Stage</text>
+    <text x="220" y="456" fill="#1A1A1A" font-size="12.5" font-weight="600">Qualifying &#9662;</text>
+    <text x="48" y="480" fill="rgba(26,26,26,0.5)" font-size="12">Owner</text>
+    <text x="220" y="480" fill="#1A1A1A" font-size="12.5" font-weight="600">Alex Rivera</text>
+    <text x="48" y="504" fill="rgba(26,26,26,0.5)" font-size="12">Location</text>
+    <text x="220" y="504" fill="#1A1A1A" font-size="12.5" font-weight="600">Detroit, MI</text>
+    <text x="48" y="528" fill="rgba(26,26,26,0.5)" font-size="12">Target close</text>
+    <text x="220" y="528" fill="#1A1A1A" font-size="12.5" font-weight="600">09/18/2026</text>
+
+    <rect x="28" y="576" width="530" height="66" rx="8" fill="#FFFFFF" stroke="rgba(0,0,0,0.08)"/>
+    <circle cx="60" cy="609" r="10" fill="#5AB07E" opacity="0.2"/>
+    <path d="M55 609 l3.5 3.5 L65 605" fill="none" stroke="#3E8A5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="80" y="605" fill="rgba(26,26,26,0.4)" font-size="11" font-weight="700" letter-spacing="0.06em">NEXT STEPS</text>
+    <text x="80" y="622" fill="rgba(26,26,26,0.55)" font-size="12">Confirm site walkthrough date with Sarah Chen</text>
+    <text x="538" y="601" fill="#1A1A1A" font-size="13" font-weight="700" text-anchor="end">3 OPEN</text>
+    <text x="538" y="618" fill="#C9662E" font-size="10.5" font-weight="700" text-anchor="end">NEXT DUE IN 2D</text>
+
+    <!-- ══ RIGHT COLUMN ══ -->
+    <rect x="584" y="250" width="588" height="222" rx="8" fill="#FFFFFF" stroke="rgba(0,0,0,0.08)"/>
+    <text x="604" y="279" fill="rgba(26,26,26,0.4)" font-size="11" font-weight="700" letter-spacing="0.06em">EMAILS</text>
+    <rect x="672" y="267" width="20" height="16" rx="8" fill="#3D5A80" opacity="0.16"/>
+    <text x="682" y="279" fill="#3D5A80" font-size="10.5" font-weight="700" text-anchor="middle">4</text>
+    <rect x="1058" y="264" width="102" height="24" rx="5" fill="none" stroke="rgba(0,0,0,0.15)"/>
+    <text x="1109" y="280" fill="rgba(26,26,26,0.6)" font-size="11" font-weight="700" text-anchor="middle">+ Create email</text>
+
+    <line x1="604" y1="296" x2="1152" y2="296" stroke="rgba(0,0,0,0.06)"/>
+    <text x="604" y="318" fill="#1A1A1A" font-size="13" font-weight="700">Midwest Fabrication Co. Expansion</text>
+    <text x="604" y="334" fill="rgba(26,26,26,0.45)" font-size="11.5">to Sarah Chen</text>
+    <rect x="944" y="308" width="46" height="18" rx="9" fill="#5AB07E" opacity="0.22"/>
+    <text x="967" y="321" fill="#3E8A5E" font-size="10" font-weight="700" text-anchor="middle">Sent</text>
+    <text x="1148" y="317" fill="rgba(26,26,26,0.3)" font-size="12" text-anchor="end">2026-07-30</text>
+
+    <line x1="604" y1="346" x2="1152" y2="346" stroke="rgba(0,0,0,0.05)"/>
+    <text x="604" y="368" fill="#1A1A1A" font-size="13" font-weight="700">Midwest Fabrication Co. Expansion</text>
+    <text x="604" y="384" fill="rgba(26,26,26,0.45)" font-size="11.5">to David Kim</text>
+    <rect x="944" y="358" width="46" height="18" rx="9" fill="#5AB07E" opacity="0.22"/>
+    <text x="967" y="371" fill="#3E8A5E" font-size="10" font-weight="700" text-anchor="middle">Sent</text>
+    <text x="1148" y="367" fill="rgba(26,26,26,0.3)" font-size="12" text-anchor="end">2026-07-31</text>
+
+    <line x1="604" y1="396" x2="1152" y2="396" stroke="rgba(0,0,0,0.05)"/>
+    <text x="604" y="418" fill="#1A1A1A" font-size="13" font-weight="700">Follow-up: facility timeline</text>
+    <text x="604" y="434" fill="rgba(26,26,26,0.45)" font-size="11.5">to Sarah Chen</text>
+    <rect x="944" y="408" width="46" height="18" rx="9" fill="#5AB07E" opacity="0.22"/>
+    <text x="967" y="421" fill="#3E8A5E" font-size="10" font-weight="700" text-anchor="middle">Sent</text>
+    <text x="1148" y="417" fill="rgba(26,26,26,0.3)" font-size="12" text-anchor="end">2026-08-01</text>
+
+    <!-- contacts card -->
+    <rect x="584" y="488" width="588" height="222" rx="8" fill="#FFFFFF" stroke="rgba(0,0,0,0.08)"/>
+    <text x="604" y="517" fill="rgba(26,26,26,0.4)" font-size="11" font-weight="700" letter-spacing="0.06em">CONTACTS</text>
+    <rect x="686" y="505" width="20" height="16" rx="8" fill="#3D5A80" opacity="0.16"/>
+    <text x="696" y="517" fill="#3D5A80" font-size="10.5" font-weight="700" text-anchor="middle">5</text>
+    <rect x="946" y="502" width="92" height="24" rx="5" fill="none" stroke="rgba(0,0,0,0.15)"/>
+    <text x="992" y="518" fill="rgba(26,26,26,0.6)" font-size="10.5" font-weight="700" text-anchor="middle">Import sheet</text>
+    <rect x="1046" y="502" width="112" height="24" rx="5" fill="none" stroke="rgba(0,0,0,0.15)"/>
+    <text x="1102" y="518" fill="rgba(26,26,26,0.6)" font-size="10.5" font-weight="700" text-anchor="middle">+ Add contact</text>
+
+    <line x1="604" y1="534" x2="1152" y2="534" stroke="rgba(0,0,0,0.06)"/>
+
+    <!-- contact row 1 -->
+    <circle cx="620" cy="558" r="15" fill="#E8614A" opacity="0.22"/>
+    <text x="620" y="562" fill="#E8614A" font-size="11" font-weight="700" text-anchor="middle">SC</text>
+    <text x="646" y="556" fill="#1A1A1A" font-size="13" font-weight="700">Sarah Chen</text>
+    <text x="646" y="571" fill="rgba(26,26,26,0.45)" font-size="11">VP Operations &#183; Facilities</text>
+    <rect x="828" y="548" width="42" height="18" rx="9" fill="rgba(0,0,0,0.05)"/>
+    <text x="849" y="561" fill="rgba(26,26,26,0.6)" font-size="9.5" font-weight="700" text-anchor="middle">Email</text>
+    <rect x="874" y="548" width="50" height="18" rx="9" fill="rgba(0,0,0,0.05)"/>
+    <text x="899" y="561" fill="rgba(26,26,26,0.6)" font-size="9.5" font-weight="700" text-anchor="middle">Mobile</text>
+    <rect x="930" y="548" width="86" height="18" rx="9" fill="#5AB07E" opacity="0.18"/>
+    <text x="973" y="561" fill="#3E8A5E" font-size="9.5" font-weight="700" text-anchor="middle">72 &#183; High reach</text>
+    <rect x="1022" y="548" width="98" height="18" rx="9" fill="#2F8F82" opacity="0.16"/>
+    <text x="1071" y="561" fill="#2F8F82" font-size="9.5" font-weight="700" text-anchor="middle">Initial Contact</text>
+
+    <line x1="604" y1="580" x2="1152" y2="580" stroke="rgba(0,0,0,0.05)"/>
+
+    <!-- contact row 2 -->
+    <circle cx="620" cy="604" r="15" fill="#F0B942" opacity="0.28"/>
+    <text x="620" y="608" fill="#9C7A1E" font-size="11" font-weight="700" text-anchor="middle">DK</text>
+    <text x="646" y="602" fill="#1A1A1A" font-size="13" font-weight="700">David Kim</text>
+    <text x="646" y="617" fill="rgba(26,26,26,0.45)" font-size="11">Project Manager, Construction</text>
+    <rect x="828" y="594" width="42" height="18" rx="9" fill="rgba(0,0,0,0.05)"/>
+    <text x="849" y="607" fill="rgba(26,26,26,0.6)" font-size="9.5" font-weight="700" text-anchor="middle">Email</text>
+    <rect x="878" y="594" width="90" height="18" rx="9" fill="#5AB07E" opacity="0.18"/>
+    <text x="923" y="607" fill="#3E8A5E" font-size="9.5" font-weight="700" text-anchor="middle">65 &#183; High reach</text>
+    <rect x="976" y="594" width="86" height="18" rx="9" fill="rgba(0,0,0,0.05)"/>
+    <text x="1019" y="607" fill="rgba(26,26,26,0.5)" font-size="9.5" font-weight="700" text-anchor="middle">Unassigned</text>
+
+    <line x1="604" y1="626" x2="1152" y2="626" stroke="rgba(0,0,0,0.05)"/>
+
+    <!-- contact row 3 -->
+    <circle cx="620" cy="650" r="15" fill="#2F8F82" opacity="0.2"/>
+    <text x="620" y="654" fill="#2F8F82" font-size="11" font-weight="700" text-anchor="middle">RO</text>
+    <text x="646" y="648" fill="#1A1A1A" font-size="13" font-weight="700">Renee Ortiz</text>
+    <text x="646" y="663" fill="rgba(26,26,26,0.45)" font-size="11">Director of Engineering</text>
+    <rect x="828" y="640" width="42" height="18" rx="9" fill="rgba(0,0,0,0.05)"/>
+    <text x="849" y="653" fill="rgba(26,26,26,0.6)" font-size="9.5" font-weight="700" text-anchor="middle">Email</text>
+    <rect x="874" y="640" width="50" height="18" rx="9" fill="rgba(0,0,0,0.05)"/>
+    <text x="899" y="653" fill="rgba(26,26,26,0.6)" font-size="9.5" font-weight="700" text-anchor="middle">Mobile</text>
+    <rect x="930" y="640" width="90" height="18" rx="9" fill="#F0B942" opacity="0.22"/>
+    <text x="975" y="653" fill="#9C7A1E" font-size="9.5" font-weight="700" text-anchor="middle">58 &#183; Med reach</text>
+    <rect x="1024" y="640" width="86" height="18" rx="9" fill="rgba(0,0,0,0.05)"/>
+    <text x="1067" y="653" fill="rgba(26,26,26,0.5)" font-size="9.5" font-weight="700" text-anchor="middle">Unassigned</text>
+
+    <line x1="604" y1="672" x2="1152" y2="672" stroke="rgba(0,0,0,0.05)"/>
+
+    <!-- contact row 4 -->
+    <circle cx="620" cy="696" r="15" fill="#3D5A80" opacity="0.2"/>
+    <text x="620" y="700" fill="#3D5A80" font-size="11" font-weight="700" text-anchor="middle">MW</text>
+    <text x="646" y="694" fill="#1A1A1A" font-size="13" font-weight="700">Marcus Webb</text>
+    <text x="646" y="709" fill="rgba(26,26,26,0.45)" font-size="11">Plant Manager</text>
+    <rect x="828" y="686" width="42" height="18" rx="9" fill="rgba(0,0,0,0.05)"/>
+    <text x="849" y="699" fill="rgba(26,26,26,0.6)" font-size="9.5" font-weight="700" text-anchor="middle">Email</text>
+    <rect x="874" y="686" width="46" height="18" rx="9" fill="rgba(0,0,0,0.05)"/>
+    <text x="897" y="699" fill="rgba(26,26,26,0.6)" font-size="9.5" font-weight="700" text-anchor="middle">Phone</text>
+    <rect x="924" y="686" width="86" height="18" rx="9" fill="#5AB07E" opacity="0.18"/>
+    <text x="967" y="699" fill="#3E8A5E" font-size="9.5" font-weight="700" text-anchor="middle">81 &#183; High reach</text>
+    <rect x="1016" y="686" width="76" height="18" rx="9" fill="#E8614A" opacity="0.18"/>
+    <text x="1054" y="699" fill="#E8614A" font-size="9.5" font-weight="700" text-anchor="middle">Champion</text>
+
+    <!-- ══ NOTES BAR ══ -->
+    <rect x="28" y="736" width="1144" height="90" rx="8" fill="#FFFFFF" stroke="rgba(0,0,0,0.08)"/>
+    <text x="48" y="762" fill="rgba(26,26,26,0.4)" font-size="11" font-weight="700" letter-spacing="0.06em">NOTES</text>
+    <rect x="112" y="750" width="16" height="15" rx="7" fill="#3D5A80" opacity="0.16"/>
+    <text x="120" y="762" fill="#3D5A80" font-size="10" font-weight="700" text-anchor="middle">1</text>
+    <text x="48" y="784" fill="rgba(26,26,26,0.35)" font-size="11.5">8/1/2026</text>
+    <text x="130" y="784" fill="rgba(26,26,26,0.7)" font-size="12.5">Alex knows Sarah Chen from a prior Detroit Chamber event &#8212; warm intro available.</text>
+    <rect x="48" y="798" width="1096" height="18" rx="4" fill="rgba(0,0,0,0.03)" stroke="rgba(0,0,0,0.08)"/>
+    <text x="60" y="811" fill="rgba(26,26,26,0.3)" font-size="11">Add a note&#8230; (links become clickable)</text>
   </g>
 </svg>
