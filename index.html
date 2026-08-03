@@ -29,15 +29,27 @@
     --coral: #E8614A;
     --gold: #F0B942;
     --gray: #6B6B6B;
-    --dark: #F4F1EC;
-    --dark2: #EAE6DF;
+    --dark: #FFFFFF;
+    --dark2: #FFFFFF;
     --dark3: #FFFFFF;
-    --light: #F4F1EC;
+    --light: #FFFFFF;
     --white: #1A1A1A;
     --border: rgba(0,0,0,0.1);
     --hero-bg: #111111;
     --ink: #1A1A1A;
     --ink-soft: rgba(26,26,26,0.6);
+
+    /* Complementary accents — used alongside coral/gold to color-code
+       feature boxes throughout the page instead of relying on tan/cream
+       section backgrounds for visual variety. */
+    --accent-teal: #2F8F82;
+    --accent-navy: #3D5A80;
+    --accent-green: #4F7A5B;
+    --accent-1: var(--coral);
+    --accent-2: var(--gold);
+    --accent-3: var(--accent-teal);
+    --accent-4: var(--accent-navy);
+    --accent-5: var(--accent-green);
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1823,6 +1835,11 @@
     justify-content: center;
     margin-top: 2px;
   }
+  .feedme-point:nth-child(5n+1) .feedme-point-num { background: var(--accent-1); }
+  .feedme-point:nth-child(5n+2) .feedme-point-num { background: var(--accent-2); }
+  .feedme-point:nth-child(5n+3) .feedme-point-num { background: var(--accent-3); }
+  .feedme-point:nth-child(5n+4) .feedme-point-num { background: var(--accent-4); }
+  .feedme-point:nth-child(5n+5) .feedme-point-num { background: var(--accent-5); }
   .feedme-point-text {
     font-size: 16px;
     line-height: 1.75;
@@ -3061,7 +3078,7 @@
     position: relative;
     border-radius: 12px;
     border: 1px solid rgba(0,0,0,0.06);
-    border-top: 1px solid rgba(255,255,255,0.9);
+    overflow: hidden;
     box-shadow:
       0 1px 2px rgba(26,26,26,0.04),
       0 10px 20px -8px rgba(26,26,26,0.12),
@@ -3076,6 +3093,31 @@
       0 16px 28px -10px rgba(26,26,26,0.16),
       0 28px 44px -16px rgba(26,26,26,0.18);
   }
+  /* Color-coded top bar per card — coral, gold, teal, navy, green */
+  .wyg-item::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  }
+  .wyg-item:nth-child(5n+1)::before { background: var(--accent-1); }
+  .wyg-item:nth-child(5n+2)::before { background: var(--accent-2); }
+  .wyg-item:nth-child(5n+3)::before { background: var(--accent-3); }
+  .wyg-item:nth-child(5n+4)::before { background: var(--accent-4); }
+  .wyg-item:nth-child(5n+5)::before { background: var(--accent-5); }
+  .wyg-item:nth-child(5n+1) .wyg-num { color: var(--accent-1); }
+  .wyg-item:nth-child(5n+2) .wyg-num { color: var(--accent-2); }
+  .wyg-item:nth-child(5n+3) .wyg-num { color: var(--accent-3); }
+  .wyg-item:nth-child(5n+4) .wyg-num { color: var(--accent-4); }
+  .wyg-item:nth-child(5n+5) .wyg-num { color: var(--accent-5); }
+  .wyg-item:nth-child(5n+1):hover .wyg-title { color: var(--accent-1); }
+  .wyg-item:nth-child(5n+2):hover .wyg-title { color: var(--accent-2); }
+  .wyg-item:nth-child(5n+3):hover .wyg-title { color: var(--accent-3); }
+  .wyg-item:nth-child(5n+4):hover .wyg-title { color: var(--accent-4); }
+  .wyg-item:nth-child(5n+5):hover .wyg-title { color: var(--accent-5); }
+  .wyg-item:nth-child(5n+1) .wyg-bullets li::before { color: var(--accent-1); }
+  .wyg-item:nth-child(5n+2) .wyg-bullets li::before { color: var(--accent-2); }
+  .wyg-item:nth-child(5n+3) .wyg-bullets li::before { color: var(--accent-3); }
+  .wyg-item:nth-child(5n+4) .wyg-bullets li::before { color: var(--accent-4); }
+  .wyg-item:nth-child(5n+5) .wyg-bullets li::before { color: var(--accent-5); }
   .wyg-num {
     font-family: 'Fraunces', serif;
     font-size: 42px;
@@ -3351,6 +3393,12 @@
   .signal-step-mid .signal-step-title {
     color: var(--white);
   }
+  .signal-step:nth-child(1) .signal-step-num { color: var(--accent-1); }
+  .signal-step:nth-child(2) .signal-step-num { color: var(--accent-3); }
+  .signal-step:nth-child(3) .signal-step-num { color: var(--accent-5); }
+  .signal-step:nth-child(1):hover .signal-step-title { color: var(--accent-1); }
+  .signal-step:nth-child(2):hover .signal-step-title { color: var(--accent-3); }
+  .signal-step:nth-child(3):hover .signal-step-title { color: var(--accent-5); }
   .signal-step-desc {
     font-size: 14px;
     line-height: 1.7;
@@ -3526,6 +3574,15 @@
       font-weight: 700;
       margin-bottom: 12px;
     }
+    .method-step { border-top: 3px solid var(--accent-1); }
+    .method-step:nth-child(4n+1) { border-top-color: var(--accent-1); }
+    .method-step:nth-child(4n+2) { border-top-color: var(--accent-2); }
+    .method-step:nth-child(4n+3) { border-top-color: var(--accent-3); }
+    .method-step:nth-child(4n+4) { border-top-color: var(--accent-4); }
+    .method-step:nth-child(4n+1) .method-step-num { background: var(--accent-1); }
+    .method-step:nth-child(4n+2) .method-step-num { background: var(--accent-2); }
+    .method-step:nth-child(4n+3) .method-step-num { background: var(--accent-3); }
+    .method-step:nth-child(4n+4) .method-step-num { background: var(--accent-4); }
     .method-step-title {
       font-size: 14px;
       font-weight: 700;
@@ -3904,15 +3961,23 @@
     .who-card {
       padding: 24px 20px;
       border: 1px solid rgba(0,0,0,0.09);
-      border-top: 2px solid rgba(240,185,66,0.4);
+      border-top: 3px solid var(--accent-1);
       border-radius: 4px;
       background: var(--dark3);
     }
+    .who-card:nth-child(4n+1) { border-top-color: var(--accent-1); }
+    .who-card:nth-child(4n+2) { border-top-color: var(--accent-2); }
+    .who-card:nth-child(4n+3) { border-top-color: var(--accent-3); }
+    .who-card:nth-child(4n+4) { border-top-color: var(--accent-4); }
     .who-card-icon {
       color: var(--gold);
       margin-bottom: 12px;
-      opacity: 0.8;
+      opacity: 0.85;
     }
+    .who-card:nth-child(4n+1) .who-card-icon { color: var(--accent-1); }
+    .who-card:nth-child(4n+2) .who-card-icon { color: var(--accent-2); }
+    .who-card:nth-child(4n+3) .who-card-icon { color: var(--accent-3); }
+    .who-card:nth-child(4n+4) .who-card-icon { color: var(--accent-4); }
     .who-card-role {
       font-size: 13px;
       font-weight: 700;
@@ -4059,6 +4124,9 @@
     left: 0;
     color: var(--coral);
   }
+  .pricing-row:last-of-type .pricing-price { color: var(--accent-3); }
+  .pricing-row:last-of-type .pricing-per { color: rgba(47,143,130,0.7); }
+  .pricing-row:last-of-type .pricing-items li::before { color: var(--accent-3); }
   @media (max-width: 640px) {
     .pricing-row { grid-template-columns: 1fr; gap: 20px; }
     .get-started-header { margin: 56px 0 32px; }
@@ -4499,6 +4567,10 @@
     color: rgba(26,26,26,0.45);
     white-space: normal;
   }
+  .cred-stat:nth-child(4n+1) .cred-stat-num { color: var(--accent-1); }
+  .cred-stat:nth-child(4n+2) .cred-stat-num { color: var(--accent-2); }
+  .cred-stat:nth-child(4n+3) .cred-stat-num { color: var(--accent-3); }
+  .cred-stat:nth-child(4n+4) .cred-stat-num { color: var(--accent-4); }
   @media (max-width: 860px) {
     .cred-layout { grid-template-columns: 1fr; gap: 48px; }
   }
