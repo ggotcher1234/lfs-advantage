@@ -1909,7 +1909,11 @@
 
   .cta-bg {
     position: absolute; inset: 0;
-    background: #FFFFFF;
+    background:
+      radial-gradient(ellipse 60% 90% at 8% 15%, rgba(232,97,74,0.35) 0%, transparent 55%),
+      radial-gradient(ellipse 55% 80% at 95% 90%, rgba(240,185,66,0.28) 0%, transparent 55%),
+      radial-gradient(ellipse 40% 60% at 60% 0%, rgba(47,143,130,0.18) 0%, transparent 55%),
+      linear-gradient(160deg, #0D0B09 0%, #14110F 55%, #1A1512 100%);
   }
 
   .contact-wrap {
@@ -1923,16 +1927,16 @@
   /* Left — intro + direct contact options */
   .contact-left {
     padding: 80px 64px 80px 0;
-    border-right: 1px solid rgba(0,0,0,0.1);
+    border-right: 1px solid rgba(255,255,255,0.14);
     display: flex; flex-direction: column; justify-content: center;
   }
 
-  .contact-left h2 { margin-bottom: 16px; color: #1A1A1A; }
+  .contact-left h2 { margin-bottom: 16px; color: #FFFFFF; }
 
   .contact-left .section-lead {
     max-width: none;
     font-size: 16px; margin-bottom: 48px;
-    color: rgba(26,26,26,0.65);
+    color: rgba(255,255,255,0.68);
   }
 
   .contact-options {
@@ -1942,17 +1946,17 @@
   .contact-info-row {
     display: flex; flex-direction: column; gap: 3px;
     padding: 10px 4px;
-    border-bottom: 1px solid rgba(0,0,0,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
   }
   .contact-info-row:last-child { border-bottom: none; }
   .contact-info-label {
     font-size: 10px; font-weight: 700;
     letter-spacing: 0.12em; text-transform: uppercase;
-    color: rgba(26,26,26,0.4);
+    color: rgba(255,255,255,0.4);
   }
   .contact-info-value {
     font-size: 16px; font-weight: 400;
-    color: rgba(26,26,26,0.82);
+    color: rgba(255,255,255,0.85);
     letter-spacing: 0.01em;
   }
 
@@ -1981,13 +1985,17 @@
   .contact-option:hover::after { width: 100%; }
 
   .contact-option.primary {
-    background: linear-gradient(135deg, rgba(232,97,74,0.12), rgba(240,185,66,0.08));
-    border-color: rgba(232,97,74,0.3);
+    background: linear-gradient(135deg, var(--coral), var(--gold));
+    border-color: transparent;
+    box-shadow: 0 10px 34px -8px rgba(232,97,74,0.55), 0 2px 8px rgba(0,0,0,0.25);
+    padding: 22px 24px;
   }
   .contact-option.primary:hover {
-    background: linear-gradient(135deg, rgba(232,97,74,0.18), rgba(240,185,66,0.12));
-    border-color: rgba(232,97,74,0.5);
+    background: linear-gradient(135deg, var(--coral), var(--gold));
+    box-shadow: 0 14px 42px -6px rgba(232,97,74,0.7), 0 2px 8px rgba(0,0,0,0.3);
+    transform: translateX(4px) translateY(-2px);
   }
+  .contact-option.primary::after { display: none; }
 
   .co-icon {
     width: 40px; height: 40px; flex-shrink: 0;
@@ -1998,11 +2006,11 @@
     transition: background 0.2s;
   }
   .contact-option.primary .co-icon {
-    background: rgba(232,97,74,0.15);
-    border-color: rgba(232,97,74,0.3);
+    background: rgba(255,255,255,0.92);
+    border-color: transparent;
   }
   .contact-option:hover .co-icon { background: rgba(0,0,0,0.1); }
-  .contact-option.primary:hover .co-icon { background: rgba(232,97,74,0.25); }
+  .contact-option.primary:hover .co-icon { background: #FFFFFF; }
   .co-icon svg { width: 18px; height: 18px; }
 
   .co-text { flex: 1; }
@@ -2011,12 +2019,12 @@
     letter-spacing: 0.14em; text-transform: uppercase;
     color: rgba(255,255,255,0.45); margin-bottom: 3px;
   }
-  .contact-option.primary .co-label { color: rgba(232,97,74,0.8); }
+  .contact-option.primary .co-label { color: rgba(255,255,255,0.85); }
   .co-value {
     font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.88);
     letter-spacing: 0.01em;
   }
-  .contact-option.primary .co-value { color: rgba(26,26,26,0.85); }
+  .contact-option.primary .co-value { color: #FFFFFF; font-weight: 700; font-size: 17px; }
 
   .co-arrow {
     color: rgba(255,255,255,0.25);
@@ -2027,6 +2035,8 @@
   .contact-option:hover .co-arrow {
     color: var(--coral); transform: translateX(3px);
   }
+  .contact-option.primary .co-arrow { color: rgba(255,255,255,0.75); }
+  .contact-option.primary:hover .co-arrow { color: #FFFFFF; transform: translateX(3px); }
 
   /* Right — callback form */
   .contact-right {
@@ -2037,11 +2047,11 @@
   .form-heading {
     font-size: 10px; font-weight: 700;
     letter-spacing: 0.16em; text-transform: uppercase;
-    color: rgba(26,26,26,0.4); margin-bottom: 24px;
+    color: rgba(255,255,255,0.5); margin-bottom: 24px;
     display: flex; align-items: center; gap: 10px;
   }
   .form-heading::after {
-    content: ''; flex: 1; height: 1px; background: rgba(0,0,0,0.12);
+    content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.15);
   }
 
   .contact-form { display: flex; flex-direction: column; gap: 12px; }
@@ -2054,13 +2064,14 @@
   .form-field label {
     font-size: 10px; font-weight: 600;
     letter-spacing: 0.12em; text-transform: uppercase;
-    color: rgba(26,26,26,0.45);
+    color: rgba(255,255,255,0.5);
   }
 
   .form-field input,
   .form-field textarea {
-    background: rgba(255,255,255,0.9);
-    border: 1px solid rgba(0,0,0,0.14);
+    background: #FFFFFF;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     border-radius: 3px;
     padding: 13px 16px;
     color: #1A1A1A;
@@ -2096,10 +2107,10 @@
     display: none;
     align-items: center; gap: 12px;
     padding: 16px 20px;
-    background: rgba(232,97,74,0.1);
-    border: 1px solid rgba(232,97,74,0.25);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18);
     border-radius: 4px;
-    font-size: 14px; color: rgba(26,26,26,0.8);
+    font-size: 14px; color: rgba(255,255,255,0.88);
     margin-top: 4px;
   }
   .form-confirm.visible { display: flex; }
@@ -2110,11 +2121,11 @@
 
   .cta-note {
     margin-top: 32px; font-size: 12px;
-    color: rgba(26,26,26,0.4);
+    color: rgba(255,255,255,0.4);
     text-align: center;
   }
-  .cta-note a { color: rgba(26,26,26,0.5); text-decoration: none; }
-  .cta-note a:hover { color: rgba(26,26,26,0.7); }
+  .cta-note a { color: rgba(255,255,255,0.55); text-decoration: none; }
+  .cta-note a:hover { color: rgba(255,255,255,0.8); }
 
   /* ─── FOOTER ──────────────────────────────────────── */
   footer {
@@ -2377,7 +2388,7 @@
 
     /* CTA / contact section */
     .contact-wrap { grid-template-columns: 1fr; min-height: auto; }
-    .contact-left { padding: 48px 24px 32px; border-right: none; border-bottom: 1px solid rgba(0,0,0,0.1); }
+    .contact-left { padding: 48px 24px 32px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.14); }
     .contact-right { padding: 32px 24px 48px; }
 
     /* Method steps — single column on very small screens */
