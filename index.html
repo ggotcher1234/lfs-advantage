@@ -2091,6 +2091,28 @@
   }
   .form-field textarea { resize: none; height: 88px; line-height: 1.6; }
 
+  .form-checkbox {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  .form-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: var(--coral);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .form-checkbox label {
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: normal;
+    color: rgba(255,255,255,0.85);
+    cursor: pointer;
+  }
+
   .form-submit {
     background: linear-gradient(135deg, var(--coral), var(--gold));
     color: var(--dark); font-family: 'Barlow', sans-serif;
@@ -2589,6 +2611,7 @@
   <input name="phone">
   <input name="email">
   <textarea name="note"></textarea>
+  <input type="checkbox" name="demo_requested">
   <button type="submit">Send</button>
 </form>
 
@@ -4382,6 +4405,10 @@
         <div class="form-field full">
           <label for="cf-note">Best time to reach you / anything else</label>
           <textarea id="cf-note" name="note" placeholder="Mornings work best, or just say hi…"></textarea>
+        </div>
+        <div class="form-field full form-checkbox">
+          <input type="checkbox" id="cf-demo" name="demo_requested" value="yes">
+          <label for="cf-demo">Request a demonstration</label>
         </div>
         <button type="submit" class="form-submit">Send My Info →</button>
       </form>
